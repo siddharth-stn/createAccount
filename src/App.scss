@@ -1,0 +1,85 @@
+
+.container {
+  margin: 0;
+  min-width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  column-gap: 5px;
+  padding: 20px;
+  background-color: lightgray;
+}
+
+.leftSideContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex:1;
+  background-color: skyblue;
+  background-image: url('./myDash-bg-image.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+  .dateRange {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 340px;
+    margin-bottom: 100px;
+    span {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+  }
+}
+
+.rightSideContainer {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  flex: 1;
+  padding-top: 30px;
+  & > div {
+    max-width: 90%;
+  }
+    form {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      row-gap: 5px;
+      color: #607d8b;
+      p {
+        color: red;
+      }
+
+      input {
+        border: 1px solid #cfd8dc;
+        border-radius: 4px;
+        padding: 0 7px;
+        font-size: 1rem;
+      }
+
+      input[name="phone"] {
+        width: 200px;
+      }
+
+      & > div {
+        display: flex;
+        flex-direction: column;
+        row-gap: 5px;
+        max-width: 90%;
+      }
+
+      & > div:last-of-type {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        column-gap: 5px;
+      }
+
+      Button {
+        width: 200px;
+      }
+    }
+}
