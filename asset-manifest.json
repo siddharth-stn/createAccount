@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/mydash-project/static/css/main.3307ace5.css",
+    "main.js": "/mydash-project/static/js/main.0e320a61.js",
+    "static/js/787.c4978aeb.chunk.js": "/mydash-project/static/js/787.c4978aeb.chunk.js",
+    "static/media/myDash-bg-image.png": "/mydash-project/static/media/myDash-bg-image.f5a888a3953e456cb594.png",
+    "index.html": "/mydash-project/index.html",
+    "main.3307ace5.css.map": "/mydash-project/static/css/main.3307ace5.css.map",
+    "main.0e320a61.js.map": "/mydash-project/static/js/main.0e320a61.js.map",
+    "787.c4978aeb.chunk.js.map": "/mydash-project/static/js/787.c4978aeb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3307ace5.css",
+    "static/js/main.0e320a61.js"
+  ]
+}
