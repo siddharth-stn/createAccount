@@ -2,7 +2,7 @@ import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';
 import {useState, useEffect} from 'react';
-
+import Chart from './Chart';
 
 function App() {
   let initialInputValues = {
@@ -17,6 +17,7 @@ function App() {
   const [inputValues, setInputValues] = useState(initialInputValues);
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
+  const[isShowChart, setIsShowChart] = useState(false); 
 
   const handleChange = (event) => {
     const {name, value, defaultChecked} = event.target;
@@ -37,6 +38,7 @@ function App() {
     console.log(formErrors);
     if(Object.keys(formErrors).length === 0 && isSubmit) {
       alert('form submitted successfully');
+      setIsShowChart(true);
     }
   }, [formErrors]);
 
@@ -80,7 +82,8 @@ const validate = (values) => {
     return errors;
   }
 
-  return (
+  function displayMainpage() {
+    return (
     <div className="container">
       <div className="leftSideContainer">
         <div className="dateRange">
@@ -129,7 +132,14 @@ const validate = (values) => {
         </div>
       </div>
       </div>
-  );
+    );
+    }
+
+    if (!isShowChart ) {
+      return displayMainpage();
+    } else {
+      return <Chart />
+    }
 }
 
 export default App;
