@@ -68,7 +68,7 @@ const validate = (values) => {
     if (!values.fullName) {
       errors.fullName = "Name is required";
     } else if (!(values.fullName.match(fullNameFormat))) {
-      errors.fullName = "name must contain letters and spaces only";
+      errors.fullName = "name must be min 4 chars and contain letters and spaces only";
     }
     if (!values.phone) {
       errors.phone = "Phone Number is required";
