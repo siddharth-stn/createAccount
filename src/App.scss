@@ -1,4 +1,3 @@
-
 .container {
   margin: 0;
   min-width: 100%;
@@ -8,56 +7,62 @@
   column-gap: 5px;
   padding: 20px;
   background-color: lightgray;
-}
 
-.leftSideContainer {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  flex:1;
-  background-color: skyblue;
-  background-image: url('./myDash-bg-image.png');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  
-  .dateRange {
+  &__hero {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex:1;
+    background-color: skyblue;
+    background-image: url('./myDash-bg-image.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__heroText {
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 340px;
     margin-bottom: 100px;
-    span {
+
+    & > span {
       font-size: 1.5em;
       font-weight: bold;
     }
   }
-}
 
-.rightSideContainer {
-  display: flex;
-  justify-content: center;
-  background-color: white;
-  flex: 1;
-  padding-top: 30px;
-  & > div {
-    max-width: 90%;
+  &__mainContent {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    flex: 1;
   }
-    form {
-      margin-top: 10px;
+
+  .wrapper {
+    margin-top: 20px;
+    max-width: 80%;
+
+    &__form {
+      margin-top: 20px;
       display: flex;
       flex-direction: column;
-      row-gap: 5px;
+      row-gap: 10px;
       color: #607d8b;
+      overflow-y: auto;
+      height: 80%;
+
       p {
         color: red;
       }
 
       input {
+        max-width: 400px;
         border: 1px solid #cfd8dc;
         border-radius: 4px;
         padding: 0 7px;
-        font-size: 1rem;
+        font-size: 1.2rem;
       }
 
       input[name="phone"] {
@@ -67,7 +72,7 @@
       & > div {
         display: flex;
         flex-direction: column;
-        row-gap: 5px;
+        row-gap: 3px;
         max-width: 90%;
       }
 
@@ -82,4 +87,5 @@
         width: 200px;
       }
     }
+}
 }

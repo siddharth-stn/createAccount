@@ -40,7 +40,7 @@ function App() {
       alert('form submitted successfully');
       setIsShowChart(true);
     }
-  }, [formErrors]);
+  }, [formErrors, isSubmit]);
 
 const mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 const passwordFormat = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;; 
@@ -85,18 +85,18 @@ const validate = (values) => {
   function displayMainpage() {
     return (
     <div className="container">
-      <div className="leftSideContainer">
-        <div className="dateRange">
+      <div className="container__hero">
+        <div className="container__heroText">
           <span>Choose a date range</span>
           <p>Lorem ipsum dolor sit amet, consectetur adispiscing elit. 
             Mauris imperdiet bibendum.
           </p>
         </div>
       </div>
-      <div className="rightSideContainer">
-        <div className="content">
+      <div className="container__mainContent">
+        <div className="wrapper">
           <h1>Create an account</h1>
-          <form onSubmit={handleSubmit}>
+          <form className="wrapper__form" onSubmit={handleSubmit}>
             <div>
               <label htmlFor="email">Your email address</label>
               <input type="email" name="email" onChange={handleChange}/>
